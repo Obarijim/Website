@@ -1,90 +1,89 @@
-      box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+body {
+    background-image: url('images/1.jpg');
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+}
 
-        body {
-            background-image: url('images/1.jpg');
-            background-size: cover;
-        }
+.container {
+    background-color: rgba(0, 0, 0, 0.8);
+    transition: all 0.3s ease 0s;
+    height: calc(100vh - 60px); /* Adjust height to account for header height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    margin-top: 60px; /* To avoid overlapping */
+}
 
-        .container {
-            background-color: rgba(0, 0, 0, 0.8);
-            transition: all 0.3s ease 0s;
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            color: white;
-        }
+.container:hover {
+    cursor: pointer;
+    background-color: black;
+    opacity: 0.7;
+}
 
-        .container:hover {
-            cursor: pointer;
-            background-color: black;
-            opacity: 0.7;
-        }
+h1 {
+    font-size: 40px;
+    font-family: "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+}
 
-        h1 {
-            font-size: 40px;
-            font-family: "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
-        }
+h3 {
+    font-family: "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+}
 
-        h3 {
-            font-family: "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
-        }
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 10%;
+    background-color: rgb(2, 2, 29);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000; /* Ensure the header stays on top */
+}
 
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px 10%;
-            background-color: rgb(2, 2, 29);
-            position: fixed;
-            width: 100%;
-            top: 0;
-        }
+.title {
+    color: white;
+    font-family: "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+    cursor: pointer;
+    font-weight: 600;
+}
 
-        .title {
-            color: white;
-            font-family: "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
-            cursor: pointer;
-            font-weight: 600;
-        }
+ul {
+    list-style: none;
+}
 
-        ul {
-            list-style: none;
-        }
+li {
+    display: inline-block;
+    font-family: "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+    font-size: 17px;
+    padding: 0px 20px;
+}
 
-        li {
-            display: inline-block;
-            font-family: "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
-            font-size: 17px;
-            padding: 0px 20px;
-        }
+li a {
+    transition: all 0.3s ease 0s;
+    color: white;
+    text-decoration: none;
+}
 
-        li a {
-            transition: all 0.3s ease 0s;
-            color: white;
-            text-decoration: none;
-        }
+li a:hover {
+    color: rgb(0, 204, 255);
+}
 
-        li a:hover {
-            color: rgb(0, 204, 255);
-        }
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: rgb(0, 204, 255);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
 
-        button {
-            margin-top: 20px;
-            padding: 10px 20px;
-            font-size: 16px;
-            cursor: pointer;
-            background-color: rgb(0, 204, 255);
-            color: white;
-            border: none;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
-        }
-
-        button:hover {
-            background-color: rgb(0, 153, 204);
-        }
+button:hover {
+    background-color: rgb(0, 153, 204);
+}
