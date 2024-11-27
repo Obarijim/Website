@@ -39,7 +39,7 @@
 
     <!-- Navigation bar -->
     <nav>
-      <a href="index.php">Home</a>
+      <a href="index.html">Home</a>
       <a href="gallery.html">Gallery</a>
     </nav>
 
