@@ -1,105 +1,80 @@
-/* General Reset */
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-/* Background */
 body {
-    background-image: url('images/1.jpg');
-    background-size: cover;
-    background-attachment: fixed;
-    font-family: "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+  background-image: url(images/1.jpg);
 }
 
-/* Header */
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 10%;
-    background-color: rgb(2, 2, 29);
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000; /* Ensures header stays above other elements */
-}
-
-.title {
-    color: white;
-    font-family: "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
-    cursor: pointer;
-    font-weight: 600;
-}
-
-.navbar ul {
-    list-style: none;
-}
-
-.navbar li {
-    display: inline-block;
-    font-size: 17px;
-    padding: 0px 20px;
-}
-
-.navbar li a {
-    transition: all 0.3s ease 0s;
-    color: white;
-    text-decoration: none;
-}
-
-.navbar li a:hover {
-    color: rgb(0, 204, 255);
-}
-
-/* Container */
 .container {
-    background-color: rgba(0, 0, 0, 0.8);
-    transition: all 0.3s ease 0s;
-    height: calc(100vh - 60px); /* Adjust height to account for header height */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    margin-top: 60px; /* Prevent overlapping with the fixed header */
+  background-color: rgb(0, 0, 0);
+  transition: all 0.3s ease 0s;
+  height: 100vh;
+  opacity: 0.8;
+  flex-direction: column;
+  display: flex;
 }
 
 .container:hover {
-    cursor: pointer;
-    background-color: black;
-    opacity: 0.7;
+  cursor: pointer;
+  background-color: black;
+  opacity: 0.5;
 }
 
-/* Titles */
-h1 {
-    font-size: 40px;
+.container h1 {
+  font-size: 40px;
+  margin-top: 40vh;
+  margin-left: 23vh;
+  color: white;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
-h3 {
-    font-size: 24px;
+.container h3 {
+  color: white;
+  margin-left: 23vh;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
-/* Button */
-button {
-    margin-top: 20px;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    background-color: rgb(0, 204, 255);
-    color: white;
-    border: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 10%;
+  background-color: rgb(2, 2, 29);
 }
 
-button:hover {
-    background-color: rgb(0, 153, 204);
+.title {
+  color: white;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  cursor: pointer;
+  font-weight: 600;
 }
 
-/* Current Date & Time */
-#current-date-time {
-    margin-top: 10px;
-    font-size: 18px;
+ul {
+  list-style: none;
 }
+
+li {
+  display: inline-block;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 17px;
+  padding: 0px 20px;
+}
+
+li a {
+  transition: all 0.3s ease 0s;
+  color: white;
+  text-decoration: none;
+}
+
+li a:hover {
+  color: rgb(0, 204, 255);
+}
+
+
