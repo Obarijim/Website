@@ -1,37 +1,19 @@
-body {
-    background-image: url('images/1.jpg');
-    background-size: cover;
+/* General Reset */
+* {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-.container {
-    background-color: rgba(0, 0, 0, 0.8);
-    transition: all 0.3s ease 0s;
-    height: calc(100vh - 60px); /* Adjust height to account for header height */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    margin-top: 60px; /* To avoid overlapping */
-}
-
-.container:hover {
-    cursor: pointer;
-    background-color: black;
-    opacity: 0.7;
-}
-
-h1 {
-    font-size: 40px;
+/* Background */
+body {
+    background-image: url('images/1.jpg');
+    background-size: cover;
+    background-attachment: fixed;
     font-family: "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
 }
 
-h3 {
-    font-family: "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
-}
-
+/* Header */
 header {
     display: flex;
     justify-content: space-between;
@@ -41,7 +23,7 @@ header {
     position: fixed;
     width: 100%;
     top: 0;
-    z-index: 1000; /* Ensure the header stays on top */
+    z-index: 1000; /* Ensures header stays above other elements */
 }
 
 .title {
@@ -51,27 +33,55 @@ header {
     font-weight: 600;
 }
 
-ul {
+.navbar ul {
     list-style: none;
 }
 
-li {
+.navbar li {
     display: inline-block;
-    font-family: "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
     font-size: 17px;
     padding: 0px 20px;
 }
 
-li a {
+.navbar li a {
     transition: all 0.3s ease 0s;
     color: white;
     text-decoration: none;
 }
 
-li a:hover {
+.navbar li a:hover {
     color: rgb(0, 204, 255);
 }
 
+/* Container */
+.container {
+    background-color: rgba(0, 0, 0, 0.8);
+    transition: all 0.3s ease 0s;
+    height: calc(100vh - 60px); /* Adjust height to account for header height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    margin-top: 60px; /* Prevent overlapping with the fixed header */
+}
+
+.container:hover {
+    cursor: pointer;
+    background-color: black;
+    opacity: 0.7;
+}
+
+/* Titles */
+h1 {
+    font-size: 40px;
+}
+
+h3 {
+    font-size: 24px;
+}
+
+/* Button */
 button {
     margin-top: 20px;
     padding: 10px 20px;
@@ -86,4 +96,10 @@ button {
 
 button:hover {
     background-color: rgb(0, 153, 204);
+}
+
+/* Current Date & Time */
+#current-date-time {
+    margin-top: 10px;
+    font-size: 18px;
 }
