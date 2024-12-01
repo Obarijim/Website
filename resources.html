@@ -27,20 +27,6 @@
     </style>
   </head>
   <body>
-   <?php
-session_start();
-
-// Set timezone
-date_default_timezone_set('UTC');
-
-// Page visits logic
-$file = "page_visits.txt";
-$count = file_exists($file) ? (int) file_get_contents($file) : 0;
-file_put_contents($file, ++$count);
-$_SESSION['visits'] = $count;
-?>
-
-
     <!-- Navigation bar -->
     <nav>
       <a href="index.html">Home</a>
@@ -111,8 +97,8 @@ $_SESSION['visits'] = $count;
       </ul>
 
       <!-- Display Date and Visits -->
-      <p>Today's Date: <?php echo date("Y-m-d"); ?></p>
-      <p>Page Visits: <?php echo $_SESSION['visits']; ?></p>
+      <p id="date">Today's Date: </p>
+      <p id="visits">Page Visits: </p>
     </main>
 
     <!-- Back-to-Top Button -->
@@ -120,10 +106,22 @@ $_SESSION['visits'] = $count;
 
     <!-- JavaScript -->
     <script>
-      // Show or hide the button based on scroll position
+      // Display today's date
+      document.getElementById("date").innerHTML = "Today's Date: " + new Date().toISOString().split("T")[0];
+
+      // Page visit counter using localStorage
+      let visits = localStorage.getItem("pageVisits");
+      visits = visits ? parseInt(visits) + 1 : 1;
+      localStorage.setItem("pageVisits", visits);
+      document.getElementById("visits").innerHTML = "Page Visits: " + visits;
+
+      // Show or hide the back-to-top button
       window.onscroll = function () {
         const button = document.getElementById("backToTop");
-        if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        if (
+          document.body.scrollTop > 100 ||
+          document.documentElement.scrollTop > 100
+        ) {
           button.style.display = "block";
         } else {
           button.style.display = "none";
