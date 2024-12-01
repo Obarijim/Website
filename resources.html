@@ -27,15 +27,19 @@
     </style>
   </head>
   <body>
-    <?php
-      session_start();
+   <?php
+session_start();
 
-      // Page visits logic
-      $file = "page_visits.txt";
-      $count = file_exists($file) ? (int) file_get_contents($file) : 0;
-      file_put_contents($file, ++$count);
-      $_SESSION['visits'] = $count;
-    ?>
+// Set timezone
+date_default_timezone_set('UTC');
+
+// Page visits logic
+$file = "page_visits.txt";
+$count = file_exists($file) ? (int) file_get_contents($file) : 0;
+file_put_contents($file, ++$count);
+$_SESSION['visits'] = $count;
+?>
+
 
     <!-- Navigation bar -->
     <nav>
